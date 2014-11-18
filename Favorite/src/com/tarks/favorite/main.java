@@ -34,7 +34,6 @@ import android.support.v4.view.GravityCompat;
 
 public class main extends SherlockFragmentActivity {
 
-	
 	// Declare Variables
 	DrawerLayout mDrawerLayout;
 	ListView mDrawerList;
