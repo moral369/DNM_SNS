@@ -22,7 +22,7 @@ public class SherlockListFragment extends ListFragment implements OnCreateOption
     @Override
     public void onAttach(Activity activity) {
         if (!(activity instanceof SherlockFragmentActivity)) {
-            throw new IllegalStateException(getClass().getSimpleName() + " must be attached to a SherlockFragmentActivity.");
+//            throw new IllegalStateException(getClass().getSimpleName() + " must be attached to a SherlockFragmentActivity.");
         }
         mActivity = (SherlockFragmentActivity)activity;
 

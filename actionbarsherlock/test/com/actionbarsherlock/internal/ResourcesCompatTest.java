@@ -1,3 +1,4 @@
+/*
 package com.actionbarsherlock.internal;
 
 import org.junit.Test;
@@ -20,4 +21,4 @@ public class ResourcesCompatTest {
         assertThat(cleanActivityName("com.jakewharton.test", ".ui.SomeClass")) //
             .isEqualTo("com.jakewharton.test.ui.SomeClass");
     }
-}
+}*/

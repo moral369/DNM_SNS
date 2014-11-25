@@ -62,7 +62,7 @@ public class PageNowFragment extends SherlockFragment implements
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
 		rootView = inflater.inflate(R.layout.listview3, container, false);
-
+AvLog.i("");
 		// + "/member/";
 		try {
 			local_path = getActivity().getCacheDir().toString() + "/member/";

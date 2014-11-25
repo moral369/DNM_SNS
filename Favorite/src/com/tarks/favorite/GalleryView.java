@@ -64,7 +64,7 @@ public class GalleryView extends SherlockActivity {
         super.onCreate(savedInstanceState);
        requestWindowFeature(Window.FEATURE_ACTION_BAR_OVERLAY);
         setContentView(R.layout.imageview);
-        
+        AvLog.i("");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true); 
         //Hide logo
         getSupportActionBar().setDisplayShowHomeEnabled(false);

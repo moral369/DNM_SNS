@@ -20,6 +20,7 @@ public class info extends SherlockActivity {
  	    public boolean onOptionsItemSelected(MenuItem item) {
  	    switch (item.getItemId()) {
  	        case android.R.id.home:
+                AvLog.i("");
  	            onBackPressed();
  	            return true;
  	        default:

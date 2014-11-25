@@ -41,6 +41,7 @@ public class tarks_account_login extends SherlockActivity {
 		// Can use progress
 		requestWindowFeature(Window.FEATURE_INDETERMINATE_PROGRESS);
 		setContentView(R.layout.tarks_account);
+        AvLog.i("");
 		setSupportProgressBarIndeterminateVisibility(false);
 		// 액션바백버튼가져오기
 				getSupportActionBar().setDisplayHomeAsUpEnabled(true);

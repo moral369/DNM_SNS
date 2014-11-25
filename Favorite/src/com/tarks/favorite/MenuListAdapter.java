@@ -32,6 +32,7 @@ public class MenuListAdapter extends BaseAdapter {
 
 	@Override
 	public int getCount() {
+        AvLog.i("title.length = "+mTitle.length);
 		return mTitle.length;
 	}
 

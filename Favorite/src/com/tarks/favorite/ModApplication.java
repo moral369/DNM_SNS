@@ -9,6 +9,7 @@ public class ModApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
+        AvLog.i("");
         instance = this;
     }
 

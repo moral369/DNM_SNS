@@ -25,6 +25,7 @@ public class no_favorite_fragment extends SherlockFragment  {
 
 			@Override
 			public void onClick(View v) {
+                AvLog.i("");
 				main activity = (main) getActivity();
 				activity.selectItem(2);
 				

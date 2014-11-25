@@ -48,7 +48,7 @@ public final class webview extends SherlockActivity {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.webview);
-		
+		AvLog.i("");
 		//actionbar back
 	//	getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
