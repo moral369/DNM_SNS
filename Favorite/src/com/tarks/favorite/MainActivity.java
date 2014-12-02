@@ -116,11 +116,9 @@ public class MainActivity extends SherlockActivity {
         Paramvalue.add(getString(R.string.lang));
         Paramvalue.add(user_srl);
         Paramvalue.add(user_srl_auth);
-        Paramvalue
-                .add("tarks_account//name_1//name_2//permission//profile_pic//profile_update//reg_id//key//like_me//favorite");
+        Paramvalue.add("tarks_account//name_1//name_2//permission//profile_pic//profile_update//reg_id//key//like_me//favorite");
 
-        new AsyncHttpTask(this, getString(R.string.server_path) + "load.php",
-                mHandler, Paramname, Paramvalue, null, 1,0);
+        new AsyncHttpTask(this, getString(R.string.server_path) + "load.php", mHandler, Paramname, Paramvalue, null, 1,0);
 
     }
 
@@ -268,6 +266,7 @@ public class MainActivity extends SherlockActivity {
 
 
     public void StartApp() {
+        AvLog.i("");
         try {
             // Global.toast(infoResult);
             // Check mySql Error
@@ -287,16 +286,11 @@ public class MainActivity extends SherlockActivity {
                 alert.setPositiveButton(getString(R.string.yes),
                         new DialogInterface.OnClickListener() {
 
-                            public void onClick(DialogInterface dialog,
-                                                int which) {
+                            public void onClick(DialogInterface dialog, int which) {
                                 // Clear Old Settings
-                                getSharedPreferences("setting", 0).edit()
-                                        .clear().commit();
-                                getSharedPreferences("temp", 0).edit().clear()
-                                        .commit();
-
-                                // New Start
-                                // 로딩 화면은 종료하라.
+                                getSharedPreferences("setting", 0).edit().clear().commit();
+                                getSharedPreferences("temp", 0).edit().clear().commit();
+                                // New Start, 로딩 화면은 종료하라.
                                 finish();
                                 // 이동한다. 메인으로
                                 Intent intent = new Intent(MainActivity.this,

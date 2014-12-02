@@ -11,31 +11,20 @@ import android.view.ViewGroup;
 import android.widget.Button;
 
 public class no_favorite_fragment extends SherlockFragment  {
+    View rootView;
 
-	View rootView;
-
-	@Override
-	public View onCreateView(LayoutInflater inflater, ViewGroup container,
-			Bundle savedInstanceState) {
-		rootView = inflater.inflate(R.layout.no_favorite, container, false);
-
-		Button bt = (Button) rootView.findViewById(R.id.button1);
-		
-		bt.setOnClickListener(new OnClickListener() {
-
-			@Override
-			public void onClick(View v) {
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        rootView = inflater.inflate(R.layout.no_favorite, container, false);
+        Button bt = (Button) rootView.findViewById(R.id.button1);
+        bt.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
                 AvLog.i("");
-				main activity = (main) getActivity();
-				activity.selectItem(2);
-				
-		
-			}
-		});
-	
-		return rootView;
-	}
-	
-	
-
+                main activity = (main) getActivity();
+                activity.selectItem(2);
+            }
+        });
+        return rootView;
+    }
 }

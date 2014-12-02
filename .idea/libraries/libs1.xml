@@ -1,5 +1,5 @@
 <component name="libraryTable">
-  <library name="libs">
+  <library name="libs1">
     <CLASSES>
       <root url="jar://$PROJECT_DIR$/Favorite/libs/gcm.jar!/" />
       <root url="jar://$PROJECT_DIR$/Favorite/libs/android-support-v4.jar!/" />

@@ -33,6 +33,7 @@ import android.util.Log;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.tarks.favorite.AvLog;
 import com.tarks.favorite.webview;
 import com.tarks.favorite.page.document_write;
 import com.tarks.favorite.user.db.DbOpenHelper;
@@ -103,8 +104,7 @@ public final class Global {
 		GCMRegistrar.checkManifest(mod);
 		final String regId = GCMRegistrar.getRegistrationId(ModApplication
 				.getInstance());
-		if ("".equals(regId)) // 구글 가이드에는 regId.equals("")로 되어 있는데
-								// Exception을 피하기 위해 수정
+		if ("".equals(regId)) // 구글 가이드에는 regId.equals("")로 되어 있는데 Exception을 피하기 위해 수정
 			GCMRegistrar.register(mod, "743824910564");
 
 		return regId;
@@ -962,8 +962,8 @@ public final class Global {
 	}
 
 	public static String getSetting(String setting, String default_value) {
-		SharedPreferences prefs = mod.getSharedPreferences("setting",
-				mod.MODE_PRIVATE);
+		SharedPreferences prefs = mod.getSharedPreferences("setting", mod.MODE_PRIVATE);
+        AvLog.i("prefs.getString(setting, default_value) = "+prefs.getString(setting, default_value));
 		return prefs.getString(setting, default_value);
 	}
 

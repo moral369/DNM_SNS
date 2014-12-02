@@ -39,7 +39,7 @@
     <string name="password">비밀번호</string>
     <string name="type_id">아이디를 입력하세요.</string>
     <string name="signing_in">로그인 중입니다...</string>
-    <string name="welcome">환영합니다</string>
+    <string name="welcome">로그인</string>
     <string name="error_login">아이디 또는 비밀번호를 잘못 입력하셨거나, 없는 계정입니다.</string>
     <string name="error">오류</string>
     <string name="ok">확인</string>
