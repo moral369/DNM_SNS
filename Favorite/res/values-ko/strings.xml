@@ -33,13 +33,13 @@
     <string name="share">공유</string>
     <string name="account">로그인(계정)</string>
     <string name="home">홈</string>
-    <string name="start">시작하기</string>
+    <string name="start">로그인</string>
     <string name="tarks_account">Tarks 계정</string>
     <string name="id">아이디</string>
     <string name="password">비밀번호</string>
     <string name="type_id">아이디를 입력하세요.</string>
     <string name="signing_in">로그인 중입니다...</string>
-    <string name="welcome">로그인</string>
+    <string name="welcome">DNM</string>
     <string name="error_login">아이디 또는 비밀번호를 잘못 입력하셨거나, 없는 계정입니다.</string>
     <string name="error">오류</string>
     <string name="ok">확인</string>
@@ -139,9 +139,9 @@
          <string name="continu">계속</string>
      
          <!-- Welcome -->
-          <string name="welcome_subtitle">가장 다채로운 커뮤니티 어플리케이션</string>
+    <string name="welcome_subtitle">더러워서 내가 만든다.</string>
     <string name="sign_up_without_id_des">ID 없이 진행하면 기기를 바꾸거나 앱을 재설치할 때 이전의 사용자 정보는 되찾을 수 없습니다.</string>
-    <string name="sign_up_without_id">아이디 없이 가입</string>
+    <!--<string name="sign_up_without_id">아이디 없이 가입</string>-->
 
     <!-- Permission -->
     <string name="permission">권한</string>

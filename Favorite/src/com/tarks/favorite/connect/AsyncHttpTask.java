@@ -1,6 +1,15 @@
 //This is source code of favorite. Copyrightⓒ. Tarks. All Rights Reserved.
 package com.tarks.favorite.connect;
 
+import android.content.Context;
+import android.os.AsyncTask;
+import android.os.Handler;
+import android.os.Message;
+
+import com.tarks.favorite.AvLog;
+import com.tarks.favorite.ModApplication;
+import com.tarks.favorite.global.Globalvariable;
+
 import java.io.BufferedReader;
 import java.io.DataOutputStream;
 import java.io.FileInputStream;
@@ -9,14 +18,6 @@ import java.io.OutputStreamWriter;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.ArrayList;
-
-import com.tarks.favorite.AvLog;
-import com.tarks.favorite.ModApplication;
-import com.tarks.favorite.global.Globalvariable;
-import android.content.Context;
-import android.os.AsyncTask;
-import android.os.Handler;
-import android.os.Message;
 
 public class AsyncHttpTask extends AsyncTask<String, Void, String> {
     private Handler handler;
@@ -36,14 +37,13 @@ public class AsyncHttpTask extends AsyncTask<String, Void, String> {
     private static FileInputStream mFileInputStream = null;
     private static URL connectUrl = null;
 
-    public AsyncHttpTask(Context cx, String urls, Handler handler,
-                         ArrayList pNames, ArrayList pValues, ArrayList fe, int hnum, int Data) {
+    public AsyncHttpTask(Context ctx, String urls, Handler handler, ArrayList pNames, ArrayList pValues, ArrayList fe, int hnum, int Data) {
         //Log.i("Test", "asyc callec");
         Globalvariable.okbutton = false;
         // Set handler
         this.handler = handler;
         // Set context
-        context = cx;
+        context = ctx;
         // set url
         url = urls;
         // Arraylists
@@ -108,22 +108,20 @@ public class AsyncHttpTask extends AsyncTask<String, Void, String> {
             conn.setUseCaches(false);
             conn.setRequestMethod("POST");
             conn.setRequestProperty("Connection", "Keep-Alive");
-            conn.setRequestProperty("Content-Type",
-                    "multipart/form-data;boundary=" + boundary);
+            conn.setRequestProperty("Content-Type", "multipart/form-data;boundary=" + boundary);
 
             // write data
             DataOutputStream dos = new DataOutputStream(conn.getOutputStream());
-            OutputStreamWriter out = new OutputStreamWriter(
-                    conn.getOutputStream(), "UTF-8");// EUC-KR");
+            OutputStreamWriter out = new OutputStreamWriter(conn.getOutputStream(), "UTF-8");// EUC-KR");
 
             // Check it is null
             if (paramNames != null && paramValues != null) {
                 for (int i = 0; i < paramNames.size(); i++) {
                     //	Log.i("value", paramNames.get(i).toString());
+                    AvLog.i("twoHyphens = "+twoHyphens+" boundary = "+boundary+" lineEnd = "+lineEnd);
                     out.write(twoHyphens + boundary + lineEnd); // 필드 구분자
                     // 시작
-                    out.write("Content-Disposition: form-data; name=\""
-                            + paramNames.get(i) + "\"" + lineEnd);
+                    out.write("Content-Disposition: form-data; name=\"" + paramNames.get(i) + "\"" + lineEnd);
                     out.write(lineEnd);
                     out.write(paramValues.get(i).toString());
                     //		Log.i("value", paramValues.get(i).toString());
@@ -151,8 +149,7 @@ public class AsyncHttpTask extends AsyncTask<String, Void, String> {
                     int bufferSize = Math.min(bytesAvailable, maxBufferSize);
 
                     byte[] buffer = new byte[bufferSize];
-                    int bytesRead = mFileInputStream
-                            .read(buffer, 0, bufferSize);
+                    int bytesRead = mFileInputStream.read(buffer, 0, bufferSize);
 
                     // Log.d("Test", "image byte is " + bytesRead);
 
@@ -161,8 +158,7 @@ public class AsyncHttpTask extends AsyncTask<String, Void, String> {
                         dos.write(buffer, 0, bufferSize);
                         bytesAvailable = mFileInputStream.available();
                         bufferSize = Math.min(bytesAvailable, maxBufferSize);
-                        bytesRead = mFileInputStream
-                                .read(buffer, 0, bufferSize);
+                        bytesRead = mFileInputStream.read(buffer, 0, bufferSize);
                     }
 
                     dos.writeBytes(lineEnd);
@@ -195,6 +191,7 @@ public class AsyncHttpTask extends AsyncTask<String, Void, String> {
             }
 
             myResult = builder.toString(); // 전송결과를 전역 변수에 저장
+            AvLog.i("myResult = "+myResult);
             // Log.e("Test", "result = " + myResult);
             //   Log.i("Result value",  myResult + ".");
             dos.close();

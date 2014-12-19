@@ -1,30 +1,21 @@
 //This is source code of favorite. Copyrightⓒ. Tarks. All Rights Reserved.
 package com.tarks.favorite.start;
 
-import java.text.NumberFormat;
-import java.util.StringTokenizer;
-
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.res.Resources;
 import android.os.Bundle;
-import android.os.Handler;
 import android.os.Message;
-import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
-import android.widget.TextView;
 
 import com.actionbarsherlock.app.SherlockActivity;
 import com.tarks.favorite.AvLog;
-import com.tarks.favorite.MainActivity;
 import com.tarks.favorite.R;
-import com.tarks.favorite.tarks_account_login;
-import com.tarks.favorite.global.Global;
 import com.tarks.favorite.global.Globalvariable;
+import com.tarks.favorite.tarks_account_login;
 
 
 
@@ -52,7 +43,8 @@ public class welcome extends SherlockActivity {
             }
         });
 
-        //Let's Start!
+        //로그인 없이 별명으로 들어가는 기능, 일단 필요 없을 것 같아서 주석 처리함./송석현
+        /*//Let's Start!
         bt = (Button) findViewById(R.id.button1);
         bt.setOnClickListener(new OnClickListener() {
 
@@ -63,7 +55,7 @@ public class welcome extends SherlockActivity {
 
 
             }
-        });
+        });*/
 
     }
 

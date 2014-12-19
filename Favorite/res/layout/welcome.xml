@@ -1,7 +1,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_width="match_parent"
     android:background="#ff9800" >
 
     <TextView
@@ -37,7 +37,7 @@
         android:text="@string/welcome_subtitle"
         android:textColor="#FFFFFF" />
 
-    <Button
+    <!--<Button
         android:id="@+id/button1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -47,7 +47,7 @@
         android:background="@null"
         android:ems="8"
         android:text="@string/sign_up_without_id"
-        android:textColor="#FFFFFF" />
+        android:textColor="#FFFFFF" />-->
 
     <TextView
         android:id="@+id/beta_text"
@@ -57,6 +57,6 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="24dp"
-        android:text="Beta Service" />
+        android:text="첫번 째 화면입니다." />
 
 </RelativeLayout>

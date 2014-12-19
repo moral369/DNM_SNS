@@ -1,8 +1,6 @@
 //This is source code of favorite. Copyrightⓒ. Tarks. All Rights Reserved.
 package com.tarks.favorite.start;
 
-import java.io.File;
-import java.util.ArrayList;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -23,10 +21,11 @@ import android.widget.ImageView;
 import android.widget.RadioGroup;
 import android.widget.RadioGroup.OnCheckedChangeListener;
 import android.widget.TextView;
+
 import com.actionbarsherlock.app.SherlockActivity;
 import com.actionbarsherlock.view.Menu;
-import com.actionbarsherlock.view.MenuItem;
 import com.actionbarsherlock.view.MenuInflater;
+import com.actionbarsherlock.view.MenuItem;
 import com.actionbarsherlock.view.Window;
 import com.tarks.favorite.AvLog;
 import com.tarks.favorite.CropManager;
@@ -36,6 +35,9 @@ import com.tarks.favorite.connect.AsyncHttpTask;
 import com.tarks.favorite.connect.ImageDownloader;
 import com.tarks.favorite.global.Global;
 import com.tarks.favorite.global.Globalvariable;
+
+import java.io.File;
+import java.util.ArrayList;
 
 public class join extends SherlockActivity implements OnCheckedChangeListener {
     // Imageview
@@ -104,8 +106,7 @@ public class join extends SherlockActivity implements OnCheckedChangeListener {
                 // Download Profile image
                 if (profile_pic.matches("Y")) {
                     profile_changed = true;
-                    new ImageDownloader(this, getString(R.string.server_path)
-                            + "files/profile/" + user_srl  + ".jpg", mHandler, 3,0);
+                    new ImageDownloader(this, getString(R.string.server_path) + "files/profile/" + user_srl  + ".jpg", mHandler, 3,0);
                 }
                 // Set EditText
                 // Country
@@ -506,13 +507,10 @@ public class join extends SherlockActivity implements OnCheckedChangeListener {
                     // no value on name
                     if (s2.matches("")) {
                         // No Value
-                        Global.Infoalert(this, getString(R.string.error),
-                                getString(R.string.noname), getString(R.string.yes));
+                        Global.Infoalert(this, getString(R.string.error), getString(R.string.noname), getString(R.string.yes));
                     } else {
                         // dont make error
-
                         try {
-
                             // Start Progressbar
                             setSupportProgressBarIndeterminateVisibility(true);
 
